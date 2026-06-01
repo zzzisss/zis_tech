@@ -1,66 +1,202 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Spark Note</title>
+    <title>SPARK NOTE</title>
     <style>
       :root {
-        color: #111;
-        background: #fff;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --bg: #f3f3f0;
+        --text: #111111;
+        --muted: #5f5f5a;
+        --line: #1a1a1a;
+        --soft-line: #c9c9c2;
+      }
+
+      * {
+        box-sizing: border-box;
       }
 
       body {
         margin: 0;
-        padding: 48px 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
       }
 
       main {
-        max-width: 720px;
+        max-width: 980px;
         margin: 0 auto;
+        padding: 28px 24px 96px;
+      }
+
+      .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        padding: 0 0 18px;
+        border-bottom: 1px solid var(--soft-line);
+      }
+
+      .brand {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+      }
+
+      .site-nav {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .site-nav a {
+        padding: 0 0 6px;
+        border-bottom: 1px solid transparent;
+        font-size: 14px;
+      }
+
+      .hero {
+        margin-bottom: 34px;
+        padding: 28px 0 28px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      h1,
+      h2 {
+        margin: 0 0 12px;
+        line-height: 1.25;
       }
 
       h1 {
-        margin: 0 0 8px;
-        font-size: 36px;
-        line-height: 1.15;
+        font-size: clamp(32px, 6vw, 60px);
+        letter-spacing: -0.02em;
+        margin-bottom: 14px;
       }
 
-      p,
-      a {
-        font-size: 16px;
-        line-height: 1.65;
+      .subtitle {
+        margin: 0;
+        max-width: 44rem;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .section-label {
+        margin: 0 0 2px;
+        color: var(--muted);
+        font-size: 14px;
+        letter-spacing: 0.03em;
       }
 
       p {
-        color: #555;
-        margin: 0 0 32px;
+        margin: 0 0 14px;
+        color: var(--muted);
+        line-height: 1.7;
       }
 
-      nav {
+      .grid {
+        display: grid;
+        gap: 0;
+        margin-top: 20px;
+      }
+
+      .row {
+        padding: 28px 0 30px;
+        border-top: 1px solid var(--soft-line);
+      }
+
+      .row-title {
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        margin-bottom: 10px;
+        color: var(--text);
+      }
+
+      .row-note {
+        margin-bottom: 16px;
+        font-size: 14px;
+      }
+
+      .actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
+        gap: 18px;
+        margin-top: 18px;
       }
 
       a {
-        color: #111;
-        border: 1px solid #111;
-        border-radius: 4px;
-        padding: 10px 14px;
+        display: inline-block;
+        padding: 10px 0 8px;
+        border-bottom: 1px solid var(--text);
+        color: var(--text);
         text-decoration: none;
+        transition: opacity 120ms ease;
+      }
+
+      a:hover {
+        opacity: 0.68;
+      }
+
+      .site-nav a:hover,
+      .site-nav a[aria-current="page"] {
+        opacity: 1;
+        border-bottom-color: var(--text);
+      }
+
+      .meta {
+        margin-top: 36px;
+        padding-top: 18px;
+        border-top: 1px solid var(--soft-line);
+        color: var(--muted);
+        font-size: 14px;
       }
     </style>
   </head>
   <body>
     <main>
-      <h1>Spark Note</h1>
-      <p>A minimal local-first note app for quick capture, organization, and reflection.</p>
-      <nav aria-label="Spark Note pages">
-        <a href="./privacy.html">Privacy Policy</a>
-        <a href="./support.html">Support</a>
-      </nav>
+      <header class="site-header">
+        <a class="brand" href="../index.html">ZIS TECH</a>
+        <nav class="site-nav" aria-label="Site">
+          <a href="./index.html" aria-current="page">Spark Note</a>
+          <a href="../prompt_buffet/index.html">Prompt Buffet</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <h1>Spark Note</h1>
+        <p class="subtitle">
+          一款 local-first 的極簡筆記 app，適合快速記下靈感、收下日常片段，並在需要時安靜回看自己的想法。
+        </p>
+      </section>
+
+      <p class="section-label">Product Pages</p>
+
+      <section class="grid" aria-label="Spark Note pages">
+        <article class="row">
+          <div class="row-title">Privacy Policy</div>
+          <p>說明 Spark Note 目前的資料儲存方式、手動備份與還原，以及目前版本不涉及帳號、追蹤或雲端同步。</p>
+          <p class="row-note">Local-first storage, manual backup, no account, no tracking.</p>
+          <div class="actions">
+            <a href="./privacy.html">Privacy Policy</a>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="row-title">Support</div>
+          <p>查看支援資訊、聯絡方式，以及和使用與上架相關的公開說明。</p>
+          <p class="row-note">Questions, support contact, and public app information.</p>
+          <div class="actions">
+            <a href="./support.html">Support</a>
+          </div>
+        </article>
+      </section>
+
+      <p class="meta">A product page on ZIS TECH</p>
     </main>
   </body>
 </html>

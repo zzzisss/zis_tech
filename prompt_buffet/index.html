@@ -3,16 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Prompt Buffet</title>
+    <title>PROMPT BUFFET</title>
     <style>
       :root {
-        --bg: #f6f5f2;
-        --card: #ffffff;
+        --bg: #f3f3f0;
         --text: #111111;
-        --muted: #666666;
-        --line: #dddddd;
+        --muted: #5f5f5a;
+        --line: #1a1a1a;
+        --soft-line: #c9c9c2;
       }
-      * { box-sizing: border-box; }
+
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -20,31 +24,134 @@
         color: var(--text);
         line-height: 1.6;
       }
+
       main {
-        max-width: 760px;
+        max-width: 980px;
         margin: 0 auto;
-        padding: 56px 20px 72px;
+        padding: 28px 24px 96px;
       }
-      h1, h2 { margin: 0 0 12px; line-height: 1.25; }
-      p { margin: 0 0 14px; }
-      .hero, .card {
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        padding: 24px;
+
+      .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        padding: 0 0 18px;
+        border-bottom: 1px solid var(--soft-line);
       }
-      .hero { margin-bottom: 18px; }
-      .lead { color: var(--muted); max-width: 42rem; }
+
+      .brand {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+      }
+
+      .site-nav {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .site-nav a {
+        padding: 0 0 6px;
+        border-bottom: 1px solid transparent;
+        font-size: 14px;
+      }
+
+      .hero {
+        margin-bottom: 34px;
+        padding: 28px 0 28px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      h1,
+      h2 {
+        margin: 0 0 12px;
+        line-height: 1.25;
+      }
+
+      h1 {
+        font-size: clamp(32px, 6vw, 60px);
+        letter-spacing: -0.02em;
+        margin-bottom: 14px;
+      }
+
+      .subtitle {
+        margin: 0;
+        max-width: 44rem;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .section-label {
+        margin: 0 0 2px;
+        color: var(--muted);
+        font-size: 14px;
+        letter-spacing: 0.03em;
+      }
+
+      p {
+        margin: 0 0 14px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
       .grid {
         display: grid;
-        gap: 14px;
+        gap: 0;
+        margin-top: 20px;
+      }
+
+      .row {
+        padding: 28px 0 30px;
+        border-top: 1px solid var(--soft-line);
+      }
+
+      .row-title {
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        margin-bottom: 10px;
+        color: var(--text);
+      }
+
+      .row-note {
+        margin-bottom: 16px;
+        font-size: 14px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
         margin-top: 18px;
       }
-      .card-title { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
-      a { color: var(--text); }
-      ul { margin: 12px 0 0; padding-left: 18px; }
+
+      a {
+        display: inline-block;
+        padding: 10px 0 8px;
+        border-bottom: 1px solid var(--text);
+        color: var(--text);
+        text-decoration: none;
+        transition: opacity 120ms ease;
+      }
+
+      a:hover {
+        opacity: 0.68;
+      }
+
+      .site-nav a:hover,
+      .site-nav a[aria-current="page"] {
+        opacity: 1;
+        border-bottom-color: var(--text);
+      }
+
       .meta {
-        margin-top: 20px;
+        margin-top: 36px;
+        padding-top: 18px;
+        border-top: 1px solid var(--soft-line);
         color: var(--muted);
         font-size: 14px;
       }
@@ -52,34 +159,44 @@
   </head>
   <body>
     <main>
+      <header class="site-header">
+        <a class="brand" href="../index.html">ZIS TECH</a>
+        <nav class="site-nav" aria-label="Site">
+          <a href="../spark_note/index.html">Spark Note</a>
+          <a href="./index.html" aria-current="page">Prompt Buffet</a>
+        </nav>
+      </header>
+
       <section class="hero">
         <h1>Prompt Buffet</h1>
-        <p class="lead">
-          Prompt Buffet 是一個 local-first 的 prompt 收納 app，適合整理常用 prompt、分類管理、快速複製，
-          並透過手動備份維持資料可攜性。
+        <p class="subtitle">
+          一款 local-first 的 prompt 收納 app，適合整理常用 prompt、分類管理，並快速取用那些你會反覆使用的文字。
         </p>
       </section>
 
-      <section class="grid">
-        <article class="card">
-          <div class="card-title">這個 app 做什麼</div>
-          <p>整理常用 prompt、分類收納、拖曳排序、搜尋，以及快速複製日常會重複使用的文字。</p>
-          <ul>
-            <li>兩層母子分類</li>
-            <li>prompt 釘選與常用整理</li>
-            <li>本地垃圾桶與手動備份</li>
-          </ul>
+      <p class="section-label">Product Pages</p>
+
+      <section class="grid" aria-label="Prompt Buffet pages">
+        <article class="row">
+          <div class="row-title">Privacy Policy</div>
+          <p>說明 Prompt Buffet 目前的資料儲存方式、手動備份與還原，以及目前版本不涉及帳號、追蹤或雲端同步。</p>
+          <p class="row-note">Local-first storage, manual backup, no account, no tracking.</p>
+          <div class="actions">
+            <a href="./privacy.html">Privacy Policy</a>
+          </div>
         </article>
 
-        <article class="card">
-          <div class="card-title">支援與隱私</div>
-          <p><a href="./support.html">支援頁</a></p>
-          <p><a href="./privacy.html">隱私政策</a></p>
-          <p><a href="mailto:zis.tech.support@gmail.com">zis.tech.support@gmail.com</a></p>
+        <article class="row">
+          <div class="row-title">Support</div>
+          <p>查看支援資訊、聯絡方式，以及和使用與上架相關的公開說明。</p>
+          <p class="row-note">Questions, support contact, and public app information.</p>
+          <div class="actions">
+            <a href="./support.html">Support</a>
+          </div>
         </article>
       </section>
 
-      <p class="meta">Prompt Buffet v1.0.0 · Created by zis_tech</p>
+      <p class="meta">A product page on ZIS TECH</p>
     </main>
   </body>
 </html>
