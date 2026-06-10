@@ -14,6 +14,14 @@ zis_tech/
    ├─ index.html
    ├─ privacy.html
    └─ support.html
+└─ prompt_buffet/
+   ├─ index.html
+   ├─ privacy.html
+   └─ support.html
+└─ video_flow/
+   ├─ index.html
+   ├─ privacy.html
+   └─ support.html
 ```
 
 ## App pages
