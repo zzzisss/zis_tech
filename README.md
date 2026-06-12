@@ -22,6 +22,10 @@ zis_tech/
    ├─ index.html
    ├─ privacy.html
    └─ support.html
+└─ task_planner/
+   ├─ index.html
+   ├─ privacy.html
+   └─ support.html
 ```
 
 ## App pages

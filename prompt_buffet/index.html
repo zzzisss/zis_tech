@@ -4,158 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>PROMPT BUFFET</title>
-    <style>
-      :root {
-        --bg: #f3f3f0;
-        --text: #111111;
-        --muted: #5f5f5a;
-        --line: #1a1a1a;
-        --soft-line: #c9c9c2;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-      }
-
-      main {
-        max-width: 980px;
-        margin: 0 auto;
-        padding: 28px 24px 96px;
-      }
-
-      .site-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 16px;
-        padding: 0 0 18px;
-        border-bottom: 1px solid var(--soft-line);
-      }
-
-      .brand {
-        color: var(--text);
-        text-decoration: none;
-        font-size: 14px;
-        letter-spacing: 0.08em;
-      }
-
-      .site-nav {
-        display: flex;
-        gap: 18px;
-        flex-wrap: wrap;
-      }
-
-      .site-nav a {
-        padding: 0 0 6px;
-        border-bottom: 1px solid transparent;
-        font-size: 14px;
-      }
-
-      .hero {
-        margin-bottom: 34px;
-        padding: 28px 0 28px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      h1,
-      h2 {
-        margin: 0 0 12px;
-        line-height: 1.25;
-      }
-
-      h1 {
-        font-size: clamp(32px, 6vw, 60px);
-        letter-spacing: -0.02em;
-        margin-bottom: 14px;
-      }
-
-      .subtitle {
-        margin: 0;
-        max-width: 44rem;
-        color: var(--muted);
-        font-size: 15px;
-        line-height: 1.7;
-      }
-
-      .section-label {
-        margin: 0 0 2px;
-        color: var(--muted);
-        font-size: 14px;
-        letter-spacing: 0.03em;
-      }
-
-      p {
-        margin: 0 0 14px;
-        color: var(--muted);
-        line-height: 1.7;
-      }
-
-      .grid {
-        display: grid;
-        gap: 0;
-        margin-top: 20px;
-      }
-
-      .row {
-        padding: 28px 0 30px;
-        border-top: 1px solid var(--soft-line);
-      }
-
-      .row-title {
-        font-size: 30px;
-        font-weight: 600;
-        letter-spacing: -0.01em;
-        margin-bottom: 10px;
-        color: var(--text);
-      }
-
-      .row-note {
-        margin-bottom: 16px;
-        font-size: 14px;
-      }
-
-      .actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 18px;
-        margin-top: 18px;
-      }
-
-      a {
-        display: inline-block;
-        padding: 10px 0 8px;
-        border-bottom: 1px solid var(--text);
-        color: var(--text);
-        text-decoration: none;
-        transition: opacity 120ms ease;
-      }
-
-      a:hover {
-        opacity: 0.68;
-      }
-
-      .site-nav a:hover,
-      .site-nav a[aria-current="page"] {
-        opacity: 1;
-        border-bottom-color: var(--text);
-      }
-
-      .meta {
-        margin-top: 36px;
-        padding-top: 18px;
-        border-top: 1px solid var(--soft-line);
-        color: var(--muted);
-        font-size: 14px;
-      }
-    </style>
+    <link rel="stylesheet" href="../site.css" />
   </head>
   <body>
     <main>
@@ -164,35 +13,53 @@
         <nav class="site-nav" aria-label="Site">
           <a href="../spark_note/index.html">Spark Note</a>
           <a href="./index.html" aria-current="page">Prompt Buffet</a>
+          <a href="../video_flow/index.html">Video Flow</a>
+          <a href="../task_planner/index.html">Task Planner</a>
         </nav>
       </header>
 
       <section class="hero">
-        <h1>Prompt Buffet</h1>
-        <p class="subtitle">
-          一款 local-first 的 prompt 收納 app，適合整理常用 prompt、分類管理，並快速取用那些你會反覆使用的文字。
-        </p>
+        <p class="hero-kicker">App Overview</p>
+        <div class="hero-head">
+          <div class="app-mark"><img src="./app_icon_ios.png" alt="Prompt Buffet app icon" /></div>
+          <div class="hero-copy">
+            <h1>Prompt Buffet</h1>
+            <p class="subtitle">一款 local-first 的 prompt 收納 app，適合整理常用 prompt、分類管理，並快速取用那些你會反覆使用的文字。</p>
+            <div class="fact-strip">
+              <div class="fact">Local-first</div>
+              <div class="fact">Manual backup</div>
+              <div class="fact">No account</div>
+            </div>
+          </div>
+        </div>
+        <nav class="page-tabs" aria-label="Prompt Buffet pages">
+          <a href="./index.html" aria-current="page">Overview</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="./support.html">Support</a>
+        </nav>
       </section>
 
       <p class="section-label">Product Pages</p>
 
-      <section class="grid" aria-label="Prompt Buffet pages">
-        <article class="row">
-          <div class="row-title">Privacy Policy</div>
-          <p>說明 Prompt Buffet 目前的資料儲存方式、手動備份與還原，以及目前版本不涉及帳號、追蹤或雲端同步。</p>
-          <p class="row-note">Local-first storage, manual backup, no account, no tracking.</p>
-          <div class="actions">
-            <a href="./privacy.html">Privacy Policy</a>
+      <section class="product-grid" aria-label="Prompt Buffet pages">
+        <article class="product-row">
+          <div class="app-mark"><div class="app-mark-mono">01</div></div>
+          <div class="product-main">
+            <div class="row-title">Privacy Policy</div>
+            <p class="row-summary">說明 Prompt Buffet 目前的資料儲存方式、手動備份與還原，以及目前版本不涉及帳號、追蹤或雲端同步。</p>
+            <p class="row-note">Local-first storage, manual backup, no account, no tracking.</p>
           </div>
+          <div class="actions"><a class="button-link" href="./privacy.html">Privacy Policy</a></div>
         </article>
 
-        <article class="row">
-          <div class="row-title">Support</div>
-          <p>查看支援資訊、聯絡方式，以及和使用與上架相關的公開說明。</p>
-          <p class="row-note">Questions, support contact, and public app information.</p>
-          <div class="actions">
-            <a href="./support.html">Support</a>
+        <article class="product-row">
+          <div class="app-mark"><div class="app-mark-mono">02</div></div>
+          <div class="product-main">
+            <div class="row-title">Support</div>
+            <p class="row-summary">查看支援資訊、聯絡方式，以及和使用與上架相關的公開說明。</p>
+            <p class="row-note">Questions, support contact, and public app information.</p>
           </div>
+          <div class="actions"><a class="button-link" href="./support.html">Support</a></div>
         </article>
       </section>
 
