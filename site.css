@@ -67,6 +67,10 @@ main {
   border-bottom-color: var(--text);
 }
 
+.site-nav-minimal {
+  justify-content: flex-start;
+}
+
 .hero {
   padding: 38px 0 34px;
   border-bottom: 1px solid var(--line);
