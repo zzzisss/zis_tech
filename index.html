@@ -3,33 +3,61 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ZIS TECH</title>
+    <title>zis tech</title>
+    <meta
+      name="description"
+      content="zis tech builds thoughtful apps, tools, and small systems for everyday life."
+    />
+    <link rel="icon" type="image/png" href="./brand-assets/png/zis-tech-favicon.png" />
     <link rel="stylesheet" href="./site.css" />
   </head>
-  <body>
+  <body class="brand-home">
     <main>
-      <header class="site-header">
-        <a class="brand" href="./index.html">ZIS TECH</a>
+      <header class="site-header home-header">
+        <a class="brand brand-lockup" href="./index.html" aria-label="zis tech home">
+          <img src="./brand-assets/png/zis-tech-wordmark-primary.png" alt="zis tech" />
+        </a>
         <nav class="site-nav site-nav-minimal" aria-label="Site">
           <a href="#products" aria-current="page">Products</a>
+          <a href="#about">About</a>
         </nav>
       </header>
 
-      <section class="hero">
-        <p class="hero-kicker">Independent Product Pages</p>
-        <h1>ZIS TECH</h1>
-        <p class="subtitle">一組 local-first、低噪音、為日常整理而生的獨立工具。每個 app 都保持簡潔，但在自己的任務上足夠清楚。</p>
+      <section class="home-hero" aria-labelledby="home-title">
+        <div class="home-hero-mark" aria-hidden="true">
+          <img src="./brand-assets/png/zis-tech-orbit-mark-primary.png" alt="" />
+        </div>
+        <div class="home-hero-copy">
+          <p class="hero-kicker">zis tech</p>
+          <h1 id="home-title">A small celestial core for ideas, tools, and everyday life.</h1>
+          <p class="subtitle">
+            一個小小的星體核心，承載你的生活所需、所見所聞的日常工具。
+          </p>
+          <p class="home-intro">
+            zis tech 打造貼近日常的 app、工具與小型系統，承載生活所需、所見所聞，也讓靈感與實用工具有自己的位置。
+          </p>
+        </div>
+      </section>
+
+      <section id="about" class="brand-note" aria-label="Brand overview">
+        <div>
+          <p class="section-label">Brand Core</p>
+          <p>
+            Calm, precise, thoughtful, and close to everyday use. The shared parent brand stays quiet, while each app keeps enough room for its own task and personality.
+          </p>
+        </div>
+        <img src="./brand-assets/png/zis-tech-wordmark-primary.png" alt="zis tech" />
       </section>
 
       <p id="products" class="section-label">Products</p>
 
-      <section class="product-grid" aria-label="App entry list">
+      <section class="product-grid home-products" aria-label="App entry list">
         <article class="product-row">
           <div class="app-mark"><img src="./spark_note/app_icon_ios.png" alt="Spark Note app icon" /></div>
           <div class="product-main">
             <div class="row-title">Spark Note</div>
             <p class="row-summary">一款 local-first 的極簡筆記 app，適合快速記下靈感、收下日常片段，並在需要時安靜回看自己的想法。</p>
-            <p class="row-note">快速記錄、Boxes 分類、Timeline 回顧，以及手動備份與還原。</p>
+            <p class="row-note">Quick notes, Boxes, Timeline review, and manual backup / restore.</p>
           </div>
           <div class="actions">
             <a class="button-link" href="./spark_note/index.html">Explore</a>
@@ -42,7 +70,7 @@
           <div class="product-main">
             <div class="row-title">Prompt Buffet</div>
             <p class="row-summary">一款 local-first 的 prompt 收納 app，適合整理常用 prompt、分類管理，並快速取用那些你會反覆使用的文字。</p>
-            <p class="row-note">母子分類、拖曳排序、快速複製，以及本機垃圾桶與手動備份。</p>
+            <p class="row-note">Nested categories, drag sorting, quick copy, local trash, and manual backup.</p>
           </div>
           <div class="actions"><a class="button-link" href="./prompt_buffet/index.html">Explore</a></div>
         </article>
@@ -52,7 +80,7 @@
           <div class="product-main">
             <div class="row-title">Video Flow</div>
             <p class="row-summary">一款 local-first 的 YouTube 連結收藏 app，適合把學習、練習、興趣或日常參考影片整理成自己的主題手帳。</p>
-            <p class="row-note">分類整理、影片備註、搜尋定位、垃圾桶，以及手動備份與還原。</p>
+            <p class="row-note">Collections, video notes, search, trash, and manual backup / restore.</p>
           </div>
           <div class="actions"><a class="button-link" href="./video_flow/index.html">Explore</a></div>
         </article>
@@ -62,13 +90,16 @@
           <div class="product-main">
             <div class="row-title">Task Planner</div>
             <p class="row-summary">一款 local-first 的任務整理 app，適合把今天要做的事、之後的想法、循環任務與完成紀錄安靜地收進同一個地方。</p>
-            <p class="row-note">Today / 計劃 / 稍後、標籤管理、循環規則、完成紀錄，以及本機設定偏好。</p>
+            <p class="row-note">Today, planned and later tasks, tags, recurring rules, and completion history.</p>
           </div>
           <div class="actions"><a class="button-link" href="./task_planner/index.html">Explore</a></div>
         </article>
       </section>
 
-      <p class="meta">Independent products by ZIS TECH</p>
+      <footer class="site-footer">
+        <img src="./brand-assets/png/zis-tech-orbit-mark-primary.png" alt="" aria-hidden="true" />
+        <p>Independent products by zis tech.</p>
+      </footer>
     </main>
   </body>
 </html>

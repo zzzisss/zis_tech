@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="zis tech Orbit Mark">
+  <title>zis tech Orbit Mark</title>
+  <g fill="none" stroke="#252728" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 255 248 C 365 92, 555 80, 705 155"/>
+    <path d="M 385 510 C 500 620, 690 595, 785 460"/>
+  </g>
+  <g fill="#252728">
+    <circle cx="318" cy="507" r="19"/>
+    <path d="M 750 131 L 757 153 L 779 160 L 757 167 L 750 189 L 743 167 L 721 160 L 743 153 Z"/>
+    <text x="330" y="430" font-family="Georgia, Times New Roman, serif" font-size="162" font-weight="400" text-anchor="middle">z</text>
+    <text x="585" y="430" font-family="Georgia, Times New Roman, serif" font-size="162" font-weight="400" text-anchor="middle">i</text>
+    <text x="815" y="430" font-family="Georgia, Times New Roman, serif" font-size="162" font-weight="400" text-anchor="middle">s</text>
+  </g>
+</svg>

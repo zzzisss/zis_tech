@@ -1,0 +1,319 @@
+:root {
+  --bg: #f7f5ef;
+  --paper: #fbfaf6;
+  --text: #1f262d;
+  --muted: #686863;
+  --soft: #8a8982;
+  --line: #d8d3c8;
+  --strong-line: #1f262d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  width: min(1120px, calc(100% - 44px));
+  margin: 0 auto;
+  padding: 30px 0 80px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+  display: block;
+  width: 132px;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  gap: 22px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.nav a {
+  padding-bottom: 6px;
+  border-bottom: 1px solid transparent;
+}
+
+.nav a:first-child {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.label {
+  margin: 0 0 12px;
+  color: var(--soft);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-line {
+  font-size: clamp(35px, 5vw, 66px);
+  line-height: 1.08;
+  letter-spacing: 0;
+  font-weight: 620;
+}
+
+.subcopy,
+.bodycopy,
+.product p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.subcopy {
+  max-width: 720px;
+  margin: 18px 0 0;
+}
+
+.divider {
+  height: 1px;
+  background: var(--line);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.text-link {
+  display: inline-flex;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--text);
+  font-size: 14px;
+}
+
+.products {
+  border-top: 1px solid var(--line);
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: start;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.app-icon {
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.app-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.app-icon.mono {
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.product h2 {
+  margin: 0 0 7px;
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.product p {
+  margin: 0 0 12px;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  color: var(--soft);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 34px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--soft);
+  font-size: 14px;
+}
+
+.footer img {
+  width: 22px;
+}
+
+/* Draft A: Brand Board */
+.draft-a .brand-board {
+  padding: 70px 0 62px;
+  text-align: center;
+  border-bottom: 1px solid var(--strong-line);
+}
+
+.draft-a .hero-mark {
+  width: min(520px, 82vw);
+  height: auto;
+  margin: 0 auto 34px;
+}
+
+.draft-a .hero-line {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.draft-a .subcopy {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.draft-a .brand-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Draft B: Product Ledger */
+.draft-b .ledger-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 70px;
+  padding: 64px 0 50px;
+  border-bottom: 1px solid var(--strong-line);
+}
+
+.draft-b .hero-line {
+  margin: 0;
+  max-width: 780px;
+}
+
+.draft-b .ledger-note {
+  align-self: end;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.draft-b .products {
+  margin-top: 26px;
+}
+
+/* Draft C: Quiet Portfolio */
+.draft-c .portfolio-hero {
+  min-height: 560px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 60px 0 42px;
+  border-bottom: 1px solid var(--strong-line);
+}
+
+.draft-c .center-lock {
+  align-self: center;
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 44px;
+  align-items: center;
+}
+
+.draft-c .orbit {
+  width: 138px;
+  height: auto;
+}
+
+.draft-c .hero-line {
+  margin: 0;
+  max-width: 760px;
+}
+
+.draft-c .quiet-strip {
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.draft-c .products {
+  margin-top: 34px;
+}
+
+@media (max-width: 760px) {
+  .page {
+    width: min(100% - 36px, 1120px);
+    padding-top: 22px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero-line {
+    font-size: 34px;
+  }
+
+  .draft-a .brand-columns,
+  .draft-b .ledger-hero,
+  .draft-c .center-lock {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .draft-a .brand-board,
+  .draft-b .ledger-hero,
+  .draft-c .portfolio-hero {
+    padding: 44px 0 38px;
+  }
+
+  .draft-c .portfolio-hero {
+    min-height: auto;
+    gap: 42px;
+  }
+
+  .product {
+    grid-template-columns: 1fr;
+  }
+
+  .draft-c .quiet-strip {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+  }
+}
