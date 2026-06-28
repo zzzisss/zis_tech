@@ -536,6 +536,10 @@ ul {
   background: #fcfcfc;
 }
 
+.spark-row:not(:has(.actions)) {
+  grid-template-columns: 44px 68px minmax(0, 1fr);
+}
+
 .spark-row-number {
   color: var(--soft);
   font-size: 12px;
@@ -551,12 +555,31 @@ ul {
   filter: grayscale(1) contrast(1.1);
 }
 
+.spark-row .app-mark-link {
+  transition: border-color 120ms ease, opacity 120ms ease, filter 120ms ease;
+}
+
+.spark-row .app-mark-link:hover {
+  border-color: var(--text);
+  opacity: 0.88;
+}
+
 .spark-row h2 {
   margin: 0 0 7px;
   font-size: 22px;
   line-height: 1.15;
   letter-spacing: 0;
   font-weight: 700;
+}
+
+.app-title-link {
+  border-bottom: 1px solid transparent;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+
+.app-title-link:hover {
+  color: var(--muted);
+  border-bottom-color: var(--text);
 }
 
 .spark-row p {
@@ -619,6 +642,11 @@ ul {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.7;
+}
+
+.spark-footer .copyright {
+  color: var(--soft);
+  letter-spacing: 0.04em;
 }
 
 .app-hero {
