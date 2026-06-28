@@ -18,88 +18,100 @@
           <img src="./brand-assets/png/zis-tech-wordmark-primary.png" alt="zis tech" />
         </a>
         <nav class="site-nav site-nav-minimal" aria-label="Site">
-          <a href="#products" aria-current="page">Products</a>
-          <a href="#about">About</a>
+          <a href="#products" aria-current="page">Apps</a>
+          <a href="#core">Core</a>
         </nav>
       </header>
 
-      <section class="home-hero" aria-labelledby="home-title">
-        <div class="home-hero-mark" aria-hidden="true">
-          <img src="./brand-assets/png/zis-tech-orbit-mark-primary.png" alt="" />
-        </div>
-        <div class="home-hero-copy">
-          <p class="hero-kicker">zis tech</p>
-          <h1 id="home-title">A small celestial core for ideas, tools, and everyday life.</h1>
-          <p class="subtitle">
-            一個小小的星體核心，承載你的生活所需、所見所聞的日常工具。
-          </p>
-          <p class="home-intro">
-            zis tech 打造貼近日常的 app、工具與小型系統，承載生活所需、所見所聞，也讓靈感與實用工具有自己的位置。
-          </p>
+      <section class="spark-hero" aria-labelledby="home-title">
+        <div class="spark-hero-main">
+          <img class="spark-hero-mark" src="./brand-assets/png/zis-tech-orbit-mark-primary.png" alt="" aria-hidden="true" />
+          <div>
+            <p class="section-label">Personal tools / local-first systems</p>
+            <h1 id="home-title">A small celestial core <span>for ideas, tools, and everyday life.</span></h1>
+          </div>
         </div>
       </section>
 
-      <section id="about" class="brand-note" aria-label="Brand overview">
+      <section id="products" class="apps-section" aria-label="App entry list">
+        <div class="apps-toolbar">
+          <p class="section-label">Apps</p>
+          <div class="quality-list" aria-label="Product qualities">
+            <span class="quality-chip is-active">All</span>
+            <span class="quality-chip">Local-first</span>
+            <span class="quality-chip">Manual backup</span>
+            <span class="quality-chip">No account</span>
+          </div>
+        </div>
+
+        <div class="spark-products">
+          <article class="spark-row">
+            <div class="spark-row-number">01</div>
+            <div class="app-mark"><img src="./spark_note/app_icon_ios.png" alt="Spark Note app icon" /></div>
+            <div class="product-main">
+              <h2>Spark Note</h2>
+              <p>A local-first minimal note app for quick thoughts, daily fragments, and quiet review.</p>
+              <p class="zh-copy" lang="zh-Hant">一款 local-first 的極簡筆記 app，快速記下靈感、收下日常片段，並安靜回看自己的想法。</p>
+              <div class="tag-row"><span>Notes</span><span>Boxes</span><span>Timeline</span><span>Backup</span></div>
+            </div>
+            <div class="actions">
+              <a class="text-link" href="./spark_note/index.html">Explore</a>
+              <a class="text-link" href="https://apps.apple.com/tw/app/spark-note/id6775680583" target="_blank" rel="noreferrer">App Store</a>
+            </div>
+          </article>
+
+          <article class="spark-row">
+            <div class="spark-row-number">02</div>
+            <div class="app-mark"><img src="./prompt_buffet/app_icon_ios.png" alt="Prompt Buffet app icon" /></div>
+            <div class="product-main">
+              <h2>Prompt Buffet</h2>
+              <p>Collect everyday prompts, keep them organized, and reuse the words you reach for often.</p>
+              <p class="zh-copy" lang="zh-Hant">整理常用 prompt、分類管理，並快速取用那些會反覆使用的文字。</p>
+              <div class="tag-row"><span>Prompts</span><span>Categories</span><span>Copy</span><span>Backup</span></div>
+            </div>
+            <div class="actions">
+              <a class="text-link" href="./prompt_buffet/index.html">Explore</a>
+              <a class="text-link" href="https://apps.apple.com/tw/app/prompt-buffet/id6776067206" target="_blank" rel="noreferrer">App Store</a>
+            </div>
+          </article>
+
+          <article class="spark-row">
+            <div class="spark-row-number">03</div>
+            <div class="app-mark"><img src="./task_planner/app_icon_ios.png" alt="Task Planner app icon" /></div>
+            <div class="product-main">
+              <h2>Task Planner</h2>
+              <p>Keep today, later ideas, recurring tasks, and finished records in one quiet place.</p>
+              <p class="zh-copy" lang="zh-Hant">把今天、之後的想法、循環任務與完成紀錄安靜收進同一個地方。</p>
+              <div class="tag-row"><span>Today</span><span>Later</span><span>Recurring</span><span>History</span></div>
+            </div>
+            <div class="actions"><a class="text-link" href="./task_planner/index.html">Explore</a></div>
+          </article>
+
+          <article class="spark-row">
+            <div class="spark-row-number">04</div>
+            <div class="app-mark"><div class="app-mark-mono">VF</div></div>
+            <div class="product-main">
+              <h2>Video Flow</h2>
+              <p>Turn learning, practice, interests, and reference videos into your own themed notebook.</p>
+              <p class="zh-copy" lang="zh-Hant">把學習、練習、興趣或日常參考影片整理成自己的主題手帳。</p>
+              <div class="tag-row"><span>Videos</span><span>Notes</span><span>Search</span><span>Restore</span></div>
+            </div>
+            <div class="actions"><a class="text-link" href="./video_flow/index.html">Explore</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="core" class="spark-footer" aria-label="Brand core">
         <div>
           <p class="section-label">Brand Core</p>
-          <p>
-            Calm, precise, thoughtful, and close to everyday use. The shared parent brand stays quiet, while each app keeps enough room for its own task and personality.
-          </p>
+          <p>Calm, precise, thoughtful, and useful without feeling noisy.</p>
+          <p class="zh-copy" lang="zh-Hant">冷靜、精準、體貼，並且有用，但不製造噪音。</p>
         </div>
-        <img src="./brand-assets/png/zis-tech-wordmark-primary.png" alt="zis tech" />
+        <div>
+          <p>Independent products by zis tech.</p>
+          <p class="zh-copy" lang="zh-Hant">由 zis tech 製作的獨立產品。</p>
+        </div>
       </section>
-
-      <p id="products" class="section-label">Products</p>
-
-      <section class="product-grid home-products" aria-label="App entry list">
-        <article class="product-row">
-          <div class="app-mark"><img src="./spark_note/app_icon_ios.png" alt="Spark Note app icon" /></div>
-          <div class="product-main">
-            <div class="row-title">Spark Note</div>
-            <p class="row-summary">一款 local-first 的極簡筆記 app，適合快速記下靈感、收下日常片段，並在需要時安靜回看自己的想法。</p>
-            <p class="row-note">Quick notes, Boxes, Timeline review, and manual backup / restore.</p>
-          </div>
-          <div class="actions">
-            <a class="button-link" href="./spark_note/index.html">Explore</a>
-            <a class="button-link" href="https://apps.apple.com/tw/app/spark-note/id6775680583" target="_blank" rel="noreferrer">App Store</a>
-          </div>
-        </article>
-
-        <article class="product-row">
-          <div class="app-mark"><img src="./prompt_buffet/app_icon_ios.png" alt="Prompt Buffet app icon" /></div>
-          <div class="product-main">
-            <div class="row-title">Prompt Buffet</div>
-            <p class="row-summary">一款 local-first 的 prompt 收納 app，適合整理常用 prompt、分類管理，並快速取用那些你會反覆使用的文字。</p>
-            <p class="row-note">Nested categories, drag sorting, quick copy, local trash, and manual backup.</p>
-          </div>
-          <div class="actions"><a class="button-link" href="./prompt_buffet/index.html">Explore</a></div>
-        </article>
-
-        <article class="product-row">
-          <div class="app-mark"><div class="app-mark-mono">VF</div></div>
-          <div class="product-main">
-            <div class="row-title">Video Flow</div>
-            <p class="row-summary">一款 local-first 的 YouTube 連結收藏 app，適合把學習、練習、興趣或日常參考影片整理成自己的主題手帳。</p>
-            <p class="row-note">Collections, video notes, search, trash, and manual backup / restore.</p>
-          </div>
-          <div class="actions"><a class="button-link" href="./video_flow/index.html">Explore</a></div>
-        </article>
-
-        <article class="product-row">
-          <div class="app-mark"><img src="./task_planner/app_icon_ios.png" alt="Task Planner app icon" /></div>
-          <div class="product-main">
-            <div class="row-title">Task Planner</div>
-            <p class="row-summary">一款 local-first 的任務整理 app，適合把今天要做的事、之後的想法、循環任務與完成紀錄安靜地收進同一個地方。</p>
-            <p class="row-note">Today, planned and later tasks, tags, recurring rules, and completion history.</p>
-          </div>
-          <div class="actions"><a class="button-link" href="./task_planner/index.html">Explore</a></div>
-        </article>
-      </section>
-
-      <footer class="site-footer">
-        <img src="./brand-assets/png/zis-tech-orbit-mark-primary.png" alt="" aria-hidden="true" />
-        <p>Independent products by zis tech.</p>
-      </footer>
     </main>
   </body>
 </html>

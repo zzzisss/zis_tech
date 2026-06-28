@@ -3,64 +3,109 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TASK PLANNER</title>
+    <title>Task Planner</title>
+    <meta
+      name="description"
+      content="Task Planner is a local-first planning app for today, later ideas, recurring tasks, and completed records."
+    />
     <link rel="stylesheet" href="../site.css" />
   </head>
-  <body>
+  <body class="app-page task-planner-page">
     <main>
       <header class="site-header">
-        <a class="brand" href="../index.html">ZIS TECH</a>
-        <nav class="site-nav site-nav-minimal" aria-label="Site">
-          <a href="../index.html">All Apps</a>
-        </nav>
-      </header>
-
-      <section class="hero">
-        <p class="hero-kicker">App Overview</p>
-        <div class="hero-head">
-          <div class="app-mark"><img src="./app_icon_ios.png" alt="Task Planner app icon" /></div>
-          <div class="hero-copy">
-            <h1>Task Planner</h1>
-            <p class="subtitle">一款 local-first 的任務整理 app，適合把今天要做的事、之後的想法、循環任務與完成紀錄安靜地收進同一個地方。</p>
-            <div class="fact-strip">
-              <div class="fact">Local-first</div>
-              <div class="fact">Tags & recurring</div>
-              <div class="fact">No account</div>
-            </div>
-          </div>
-        </div>
-        <nav class="page-tabs" aria-label="Task Planner pages">
+        <a class="brand brand-lockup" href="../index.html" aria-label="zis tech home">
+          <img src="../brand-assets/png/zis-tech-wordmark-primary.png" alt="zis tech" />
+        </a>
+        <nav class="site-nav site-nav-minimal" aria-label="Task Planner pages">
           <a href="./index.html" aria-current="page">Overview</a>
           <a href="./privacy.html">Privacy</a>
           <a href="./support.html">Support</a>
         </nav>
+      </header>
+
+      <section class="app-hero" aria-labelledby="app-title">
+        <div class="app-hero-icon">
+          <img src="./app_icon_ios.png" alt="Task Planner app icon" />
+        </div>
+        <div class="app-hero-copy">
+          <p class="section-label">Local-first task space</p>
+          <h1 id="app-title">Task Planner</h1>
+          <p class="app-lede">把今天、之後的想法、循環任務與完成紀錄安靜收進同一個地方。</p>
+        </div>
       </section>
 
-      <p class="section-label">Product Pages</p>
+      <section class="app-summary" aria-label="Task Planner summary">
+        <div>
+          <p class="section-label">For</p>
+          <p>Today, later ideas, recurring tasks, and small records you want to keep visible without adding noise.</p>
+          <p class="zh-copy" lang="zh-Hant">適合今天要做的事、之後的想法、循環任務，以及想安靜保留下來的小紀錄。</p>
+        </div>
+        <div>
+          <p class="section-label">Principle</p>
+          <p>Local-first and no account required. Your planner data stays on your device.</p>
+          <p class="zh-copy" lang="zh-Hant">以本機優先、不需要帳號為核心。你的任務與規劃資料留在裝置中。</p>
+        </div>
+      </section>
 
-      <section class="product-grid" aria-label="Task Planner pages">
-        <article class="product-row">
-          <div class="app-mark"><div class="app-mark-mono">01</div></div>
-          <div class="product-main">
-            <div class="row-title">Privacy Policy</div>
-            <p class="row-summary">說明 Task Planner 目前的資料儲存方式、標籤與設定偏好，以及目前版本不涉及帳號、追蹤、備份或雲端同步。</p>
-            <p class="row-note">Local-first storage, tags and settings, no account, no tracking, no cloud sync.</p>
+      <section class="app-actions-panel" aria-label="Task Planner actions">
+        <a class="text-link" href="./privacy.html">Privacy Policy</a>
+        <a class="text-link" href="./support.html">Support</a>
+      </section>
+
+      <section class="app-feature-list" aria-label="Task Planner features">
+        <article class="app-feature-row">
+          <div class="feature-number">01</div>
+          <div>
+            <h2>Today</h2>
+            <p>Keep the current day visible without turning the page into a heavy dashboard.</p>
+            <p class="zh-copy" lang="zh-Hant">讓今天要處理的事情保持清楚，但不把頁面變成沉重的儀表板。</p>
           </div>
-          <div class="actions"><a class="button-link" href="./privacy.html">Privacy Policy</a></div>
         </article>
 
-        <article class="product-row">
-          <div class="app-mark"><div class="app-mark-mono">02</div></div>
-          <div class="product-main">
-            <div class="row-title">Support</div>
-            <p class="row-summary">查看支援資訊、聯絡方式，以及目前版本在資料保存與使用方式上的公開說明。</p>
-            <p class="row-note">Questions, support contact, and current local-first usage notes.</p>
+        <article class="app-feature-row">
+          <div class="feature-number">02</div>
+          <div>
+            <h2>Later</h2>
+            <p>Hold ideas and tasks that are not for right now, but should not disappear.</p>
+            <p class="zh-copy" lang="zh-Hant">收下那些現在不用處理、但不想讓它消失的想法與任務。</p>
           </div>
-          <div class="actions"><a class="button-link" href="./support.html">Support</a></div>
+        </article>
+
+        <article class="app-feature-row">
+          <div class="feature-number">03</div>
+          <div>
+            <h2>Recurring</h2>
+            <p>Track repeated work and routines in the same quiet planning space.</p>
+            <p class="zh-copy" lang="zh-Hant">在同一個安靜的規劃空間裡管理循環工作與日常例行事項。</p>
+          </div>
+        </article>
+
+        <article class="app-feature-row">
+          <div class="feature-number">04</div>
+          <div>
+            <h2>History</h2>
+            <p>Keep completed records available when you want to look back.</p>
+            <p class="zh-copy" lang="zh-Hant">保留完成紀錄，讓你需要時可以回頭查看。</p>
+          </div>
         </article>
       </section>
 
-      <p class="meta">A product page on ZIS TECH.</p>
+      <section class="app-info-grid" aria-label="Public pages">
+        <article>
+          <p class="section-label">Privacy</p>
+          <h2>Local-first storage</h2>
+          <p>Task Planner currently does not require an account, tracking, analytics SDKs, push notifications, or cloud sync.</p>
+          <p class="zh-copy" lang="zh-Hant">Task Planner 目前不需要帳號，也不使用追蹤、分析 SDK、推播通知或雲端同步。</p>
+          <a class="text-link" href="./privacy.html">Read privacy policy</a>
+        </article>
+        <article>
+          <p class="section-label">Support</p>
+          <h2>Help and contact</h2>
+          <p>Find support details, reporting guidance, and current local-first usage notes.</p>
+          <p class="zh-copy" lang="zh-Hant">查看支援資訊、問題回報建議，以及目前本機優先使用方式的公開說明。</p>
+          <a class="text-link" href="./support.html">Open support page</a>
+        </article>
+      </section>
     </main>
   </body>
 </html>
