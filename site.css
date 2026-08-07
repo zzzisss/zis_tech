@@ -862,6 +862,11 @@ ul {
   filter: grayscale(1) contrast(1.08);
 }
 
+.task-planner-page .app-hero-icon,
+.task-planner-page .app-doc-icon {
+  filter: none;
+}
+
 .app-doc-icon img {
   display: block;
   width: 100%;
