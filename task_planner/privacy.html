@@ -27,27 +27,27 @@
         <div class="app-doc-title">
           <p class="section-label">Policy</p>
           <h1 id="privacy-title">Task Planner Privacy Policy</h1>
-          <p class="app-lede">Effective date: August 2, 2026</p>
+          <p class="app-lede">Effective date: August 13, 2026</p>
         </div>
         <div class="app-doc-aside">
           <div class="app-doc-icon">
             <img src="./app_icon_ios.png" alt="Task Planner app icon" />
           </div>
-          <p>Local-first tasks, local settings, no account required.</p>
-          <p class="zh-copy" lang="zh-Hant">本機優先任務、裝置內設定，不需要帳號。</p>
+          <p>Local-first tasks, optional private iCloud sync, no account required.</p>
+          <p class="zh-copy" lang="zh-Hant">本機優先任務、可選擇私人 iCloud 同步，不需要帳號。</p>
         </div>
       </section>
 
       <section class="app-doc-summary" aria-label="Privacy summary">
         <div>
           <p class="section-label">Core</p>
-          <p>Your planner data is stored on your device.</p>
-          <p class="zh-copy" lang="zh-Hant">你的規劃資料會儲存在你的裝置上。</p>
+          <p>Your planner data is stored on your device first.</p>
+          <p class="zh-copy" lang="zh-Hant">你的規劃資料會優先儲存在裝置上。</p>
         </div>
         <div>
           <p class="section-label">Network</p>
-          <p>No advertising, tracking, analytics SDKs, push notifications, or account-based cloud sync currently used.</p>
-          <p class="zh-copy" lang="zh-Hant">目前不使用廣告、追蹤、分析 SDK、推播通知，或以帳號為基礎的雲端同步。</p>
+          <p>No advertising or cross-app tracking. Network use is limited to optional private iCloud sync, purchase validation, and user-directed sharing.</p>
+          <p class="zh-copy" lang="zh-Hant">不使用廣告或跨 app 追蹤；網路用途限於可選擇的私人 iCloud 同步、購買驗證與使用者主動分享。</p>
         </div>
       </section>
 
@@ -74,8 +74,8 @@
           <div class="feature-number">03</div>
           <div>
             <h2>Settings and Preferences</h2>
-            <p>Task Planner may store local display preferences such as tag size and completed-task preview count. These preferences are stored only on your device as part of the local app state.</p>
-            <p class="zh-copy" lang="zh-Hant">Task Planner 可能會儲存標籤大小、已完成任務預覽數量等本機顯示偏好。這些偏好只會作為本機 app 狀態的一部分儲存在你的裝置上。</p>
+            <p>Task Planner stores display preferences such as tag size, text size, completed-task preview count, sound, and navigation theme. If you enable iCloud sync, supported planner settings may sync with your planner data. Onboarding progress and the sync-enabled preference remain local to each device.</p>
+            <p class="zh-copy" lang="zh-Hant">Task Planner 會儲存標籤大小、文字大小、完成任務預覽數量、音效與導覽主題等偏好。開啟 iCloud 同步後，支援的規劃設定可能會隨資料同步；新手引導進度與同步開關仍只保留在各裝置本機。</p>
           </div>
         </article>
 
@@ -91,23 +91,32 @@
         <article class="app-doc-row">
           <div class="feature-number">05</div>
           <div>
-            <h2>Data Collection</h2>
-            <p>Task Planner does not currently collect personal data. Task Planner does not currently use advertising, third-party tracking, analytics SDKs, push notifications, or account-based cloud sync.</p>
-            <p class="zh-copy" lang="zh-Hant">Task Planner 目前不蒐集個人資料，也不使用廣告、第三方追蹤、分析 SDK、推播通知或以帳號為基礎的雲端同步。</p>
+            <h2>Optional iCloud Sync</h2>
+            <p>Task Planner Pro users may explicitly enable sync. When enabled, planner data is stored in the user's private CloudKit database under their Apple iCloud account so it can merge across supported devices. Sync is off by default, local data remains available offline, and turning sync off stops future synchronization on that device.</p>
+            <p class="zh-copy" lang="zh-Hant">Task Planner Pro 使用者可以主動開啟同步。開啟後，規劃資料會儲存在使用者 Apple iCloud 帳號的私人 CloudKit 資料庫，以便在支援的裝置間合併。同步預設關閉，本機資料仍可離線使用；關閉同步會停止該裝置後續的同步。</p>
           </div>
         </article>
 
         <article class="app-doc-row">
           <div class="feature-number">06</div>
           <div>
-            <h2>Network Use</h2>
-            <p>Task Planner is designed to work with local device storage. When you choose to export a backup, the device share sheet may pass that file to a destination you select. Task Planner does not automatically upload or sync backup files. If future versions add automatic sync, analytics, or other network features, this privacy policy will be updated before those features are released.</p>
-            <p class="zh-copy" lang="zh-Hant">Task Planner 設計為使用裝置本機儲存。當你選擇匯出備份時，裝置的系統分享表單可能會將檔案交給你選擇的目的地。Task Planner 不會自動上傳或同步備份檔案。如果未來版本加入自動同步、分析或其他網路功能，這份隱私權政策會在那些功能發布前更新。</p>
+            <h2>Purchases and RevenueCat</h2>
+            <p>Task Planner uses RevenueCat to validate the one-time Pro purchase and provide the Pro entitlement. RevenueCat receives purchase history and an automatically generated anonymous App User ID for app functionality and purchase analytics. Task Planner does not provide RevenueCat with a custom user ID, name, email address, or advertising identifier, and does not use this information for tracking. See the <a class="text-link" href="https://www.revenuecat.com/privacy/">RevenueCat Privacy Policy</a>.</p>
+            <p class="zh-copy" lang="zh-Hant">Task Planner 使用 RevenueCat 驗證 Pro 一次買斷購買並提供 Pro 權限。RevenueCat 會基於 app 功能與購買分析處理購買紀錄及自動產生的匿名 App User ID。Task Planner 不會提供自訂使用者 ID、姓名、Email 或廣告識別碼，也不會用於追蹤。請參閱 <a class="text-link" href="https://www.revenuecat.com/privacy/">RevenueCat 隱私權政策</a>。</p>
           </div>
         </article>
 
         <article class="app-doc-row">
           <div class="feature-number">07</div>
+          <div>
+            <h2>Network Use</h2>
+            <p>Task Planner otherwise works with local device storage. When you export a backup, the system share sheet may pass the file to a destination you choose; Task Planner does not automatically upload backup files. The app does not use advertising, cross-app tracking, or push notifications.</p>
+            <p class="zh-copy" lang="zh-Hant">除此之外，Task Planner 以裝置本機儲存運作。匯出備份時，系統分享表單可能會將檔案交給你選擇的目的地；Task Planner 不會自動上傳備份檔案。App 不使用廣告、跨 app 追蹤或推播通知。</p>
+          </div>
+        </article>
+
+        <article class="app-doc-row">
+          <div class="feature-number">08</div>
           <div>
             <h2>Contact</h2>
             <p>For support or privacy questions, contact <a class="text-link" href="mailto:zis.tech.support@gmail.com">zis.tech.support@gmail.com</a>.</p>
@@ -116,7 +125,7 @@
         </article>
 
         <article class="app-doc-row">
-          <div class="feature-number">08</div>
+          <div class="feature-number">09</div>
           <div>
             <h2>Changes</h2>
             <p>This policy may be updated as Task Planner changes. The effective date above will be updated when the policy changes.</p>
