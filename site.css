@@ -488,36 +488,6 @@ ul {
   margin-top: 0;
 }
 
-.apps-toolbar {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  align-items: center;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--soft-line);
-}
-
-.quality-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.quality-chip {
-  border: 1px solid var(--soft-line);
-  border-radius: 2px;
-  padding: 7px 11px;
-  color: var(--muted);
-  background: #ffffff;
-  font-size: 12px;
-}
-
-.quality-chip.is-active {
-  color: #ffffff;
-  border-color: var(--text);
-  background: var(--text);
-}
-
 .spark-products {
   display: grid;
   gap: 12px;
@@ -552,11 +522,10 @@ ul {
   border-color: var(--soft-line);
   border-radius: 7px;
   background: #ffffff;
-  filter: grayscale(1) contrast(1.1);
 }
 
 .spark-row .app-mark-link {
-  transition: border-color 120ms ease, opacity 120ms ease, filter 120ms ease;
+  transition: border-color 120ms ease, opacity 120ms ease;
 }
 
 .spark-row .app-mark-link:hover {
@@ -637,6 +606,12 @@ ul {
   font-size: 13px;
 }
 
+.brand-home .spark-footer {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(56px, 8vw, 96px);
+  row-gap: 14px;
+}
+
 .spark-footer p {
   margin: 0;
   color: var(--muted);
@@ -645,8 +620,36 @@ ul {
 }
 
 .spark-footer .copyright {
+  margin-top: 10px;
   color: var(--soft);
   letter-spacing: 0.04em;
+}
+
+.footer-support {
+  display: grid;
+  gap: 6px;
+}
+
+.brand-home .footer-support {
+  width: min(100%, 320px);
+  justify-self: start;
+}
+
+.spark-footer .footer-support .section-label {
+  margin-bottom: 2px;
+}
+
+.spark-footer .footer-support p {
+  margin: 0;
+}
+
+.footer-support-link {
+  color: var(--text);
+  border-bottom: 1px solid var(--text);
+}
+
+.footer-support-note {
+  color: var(--soft) !important;
 }
 
 .app-hero {
@@ -972,6 +975,16 @@ ul {
     gap: 18px;
   }
 
+  .brand-home .spark-footer {
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
+    row-gap: 18px;
+  }
+
+  .brand-home .footer-support {
+    width: 100%;
+  }
+
   .spark-hero {
     padding: 42px 0 32px;
   }
@@ -982,11 +995,6 @@ ul {
 
   .brand-home .spark-hero h1 {
     font-size: 27px;
-  }
-
-  .apps-toolbar {
-    align-items: flex-start;
-    flex-direction: column;
   }
 
   .spark-row .actions {
