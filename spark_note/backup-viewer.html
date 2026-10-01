@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; object-src 'none'; base-uri 'none'" />
+    <title>查看備份筆記 · Spark Note</title>
+    <meta name="description" content="在瀏覽器中查看 Spark Note 備份筆記。檔案只在你的裝置上讀取。" />
+    <link rel="stylesheet" href="../site.css" />
+    <link rel="stylesheet" href="./backup-viewer.css" />
+    <script src="./backup-viewer.js" defer></script>
+  </head>
+  <body class="app-page spark-note-page backup-viewer-page">
+    <main>
+      <header class="site-header">
+        <a class="brand brand-lockup" href="../index.html" aria-label="zis tech home">
+          <img src="../brand-assets/png/zis-tech-wordmark-primary.png" alt="zis tech" />
+        </a>
+        <nav class="site-nav site-nav-minimal" aria-label="Spark Note pages">
+          <a href="./index.html">Overview</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="./support.html">Support</a>
+        </nav>
+      </header>
+
+      <section class="viewer-intro" aria-labelledby="viewer-title">
+        <div class="viewer-intro-copy">
+          <p class="section-label">Spark Note / Backup viewer</p>
+          <h1 id="viewer-title">查看備份筆記</h1>
+          <p class="viewer-lede">把備份中的想法，安靜地攤開來看。</p>
+          <p class="viewer-intro-detail">選取從 Spark Note 匯出的 JSON 備份，即可查看筆記與分類箱。</p>
+        </div>
+        <div class="viewer-app-icon" aria-hidden="true">
+          <img src="./app_icon_ios.png" alt="" />
+        </div>
+      </section>
+
+      <section class="viewer-picker" aria-label="選取備份檔">
+        <div class="viewer-picker-heading">
+          <span class="viewer-step">01 / 開始查看</span>
+          <label for="backup-file">選擇備份檔</label>
+        </div>
+        <input id="backup-file" type="file" accept=".json,application/json" aria-describedby="file-help" />
+        <p id="file-help">支援 Spark Note 備份格式第 1 版。</p>
+        <p id="file-status" class="viewer-status" role="status" aria-live="polite"></p>
+        <div class="viewer-privacy">
+          <span class="viewer-privacy-mark" aria-hidden="true"></span>
+          <p>檔案只在此分頁讀取，不會上傳、修改原檔，或存入網站儲存空間。</p>
+        </div>
+      </section>
+
+      <section id="viewer-content" class="viewer-content" aria-label="備份筆記" hidden>
+        <div class="viewer-print-heading">
+          <div class="viewer-print-topline"><span>Spark Note</span><span>NOTE ARCHIVE</span></div>
+          <h1>備份筆記</h1>
+          <p id="print-selection"></p>
+        </div>
+        <div class="viewer-summary">
+          <div>
+            <p class="viewer-step">02 / 備份內容</p>
+            <h2 id="backup-name"></h2>
+            <p id="backup-meta"></p>
+          </div>
+          <div class="viewer-summary-side">
+            <p id="backup-count"></p>
+            <button id="export-pdf" class="viewer-pdf-button" type="button" title="在列印視窗選擇儲存為 PDF">匯出 PDF</button>
+            <label class="viewer-pdf-option"><input id="print-note-times" type="checkbox" checked />PDF 顯示建立／更新時間</label>
+            <p class="viewer-pdf-hint">依目前篩選結果儲存；關閉列印設定中的「頁首與頁尾」可移除網址。</p>
+          </div>
+        </div>
+
+        <div class="viewer-controls">
+          <fieldset class="viewer-status-filter">
+            <legend>筆記狀態</legend>
+            <label><input type="radio" name="note-status" value="all" checked />全部</label>
+            <label><input type="radio" name="note-status" value="favorite" />收藏</label>
+            <label><input type="radio" name="note-status" value="trash" />垃圾桶</label>
+          </fieldset>
+          <label class="viewer-control" for="box-filter">分類箱
+            <select id="box-filter"><option value="all">所有分類箱</option></select>
+          </label>
+          <label class="viewer-control viewer-search" for="note-search">搜尋筆記
+            <input id="note-search" type="search" placeholder="輸入關鍵字" autocomplete="off" />
+          </label>
+        </div>
+
+        <p id="result-count" class="viewer-result-count" aria-live="polite"></p>
+        <div id="note-list" class="viewer-note-list"></div>
+        <p id="empty-results" class="viewer-empty" hidden>沒有符合條件的筆記。</p>
+      </section>
+
+      <footer class="spark-footer">
+        <div>
+          <p class="section-label">Spark Note</p>
+          <p>在自己的裝置上，安心回看筆記。</p>
+        </div>
+        <p><a class="text-link" href="./index.html">返回 Spark Note</a></p>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -751,6 +751,40 @@ ul {
   border-bottom: 1px solid var(--soft-line);
 }
 
+.backup-tool-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  padding: 6px 9px;
+  border: 1px solid var(--soft-line);
+  border-radius: 4px;
+  background: #faf9f6;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.backup-tool-link:hover {
+  border-color: #88847d;
+}
+
+.backup-tool-link:focus-visible {
+  outline: 2px solid #55514b;
+  outline-offset: 3px;
+}
+
+.backup-tool-tag {
+  padding: 2px 5px;
+  border-radius: 2px;
+  background: #282824;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
 .primary-link {
   display: inline-flex;
   align-items: center;
@@ -866,7 +900,9 @@ ul {
 }
 
 .task-planner-page .app-hero-icon,
-.task-planner-page .app-doc-icon {
+.task-planner-page .app-doc-icon,
+.dice-box-page .app-hero-icon,
+.dice-box-page .app-doc-icon {
   filter: none;
 }
 
@@ -1056,6 +1092,10 @@ ul {
   .app-actions-panel {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .backup-tool-link {
+    margin-left: 0;
   }
 
   .home-hero,

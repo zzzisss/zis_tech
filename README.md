@@ -13,7 +13,8 @@ zis_tech/
 └─ spark_note/
    ├─ index.html
    ├─ privacy.html
-   └─ support.html
+   ├─ support.html
+   └─ backup-viewer.html
 └─ prompt_buffet/
    ├─ index.html
    ├─ privacy.html
@@ -26,6 +27,10 @@ zis_tech/
    ├─ index.html
    ├─ privacy.html
    └─ support.html
+└─ dice_box/
+   ├─ index.html
+   ├─ privacy.html
+   └─ support.html
 ```
 
 ## App pages
@@ -33,5 +38,8 @@ zis_tech/
 - `index.html`: minimal app entry page
 - `privacy.html`: public privacy policy URL for store review
 - `support.html`: public support URL for store review and users
+- `spark_note/backup-viewer.html`: local-only viewer for Spark Note JSON backups (version 1), with browser PDF export of the current filtered notes
 
 Keep pages static and lightweight unless a richer public site is needed later.
+
+Run `node --test spark_note/backup-viewer.test.cjs` to check backup reading, filters, and invalid-file handling. The test uses the Spark Note screenshot demo backup when it is available beside this repository, or a built-in sample when it is not.
