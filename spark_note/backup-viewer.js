@@ -8,6 +8,7 @@
   const backupMeta = document.querySelector('#backup-meta');
   const backupCount = document.querySelector('#backup-count');
   const exportPdf = document.querySelector('#export-pdf');
+  const quickExportPdf = document.querySelector('#export-pdf-quick');
   const printNoteTimes = document.querySelector('#print-note-times');
   const printSelection = document.querySelector('#print-selection');
   const boxFilter = document.querySelector('#box-filter');
@@ -123,7 +124,8 @@
     const boxLabel = boxId === 'all' ? '所有分類箱' : boxId === 'unboxed' ? '未分類' : boxNames.get(boxId) || '分類箱不詳';
     const searchLabel = searchInput.value.trim() ? ` · 搜尋「${searchInput.value.trim()}」` : '';
     printSelection.textContent = `篩選：${statusLabel} · ${boxLabel}${searchLabel} · ${filtered.length} 則筆記`;
-    exportPdf.disabled = filtered.length === 0;
+    if (exportPdf) exportPdf.disabled = filtered.length === 0;
+    if (quickExportPdf) quickExportPdf.disabled = filtered.length === 0;
     emptyResults.hidden = filtered.length !== 0;
   }
 
@@ -155,7 +157,8 @@
     backupCount.textContent = '';
     resultCount.textContent = '';
     printSelection.textContent = '';
-    exportPdf.disabled = true;
+    if (exportPdf) exportPdf.disabled = true;
+    if (quickExportPdf) quickExportPdf.disabled = true;
     boxFilter.replaceChildren(new Option('所有分類箱', 'all'));
     fileStatus.textContent = '';
     try {
@@ -173,11 +176,13 @@
   document.querySelectorAll('input[name="note-status"]').forEach((input) => input.addEventListener('change', renderNotes));
   boxFilter.addEventListener('change', renderNotes);
   searchInput.addEventListener('input', renderNotes);
-  printNoteTimes.addEventListener('change', () => {
+  printNoteTimes?.addEventListener('change', () => {
     content.classList.toggle('hide-print-times', !printNoteTimes.checked);
   });
-  exportPdf.addEventListener('click', () => {
-    if (backup && !exportPdf.disabled) window.print();
-  });
+  function exportCurrentNotes() {
+    if (backup && (exportPdf ? !exportPdf.disabled : quickExportPdf && !quickExportPdf.disabled)) window.print();
+  }
+  exportPdf?.addEventListener('click', exportCurrentNotes);
+  quickExportPdf?.addEventListener('click', exportCurrentNotes);
   window.addEventListener('resize', updateOverflowButtons);
 })();

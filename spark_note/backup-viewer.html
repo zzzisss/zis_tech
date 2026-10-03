@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; object-src 'none'; base-uri 'none'" />
-    <title>查看備份筆記 · Spark Note</title>
-    <meta name="description" content="在瀏覽器中查看 Spark Note 備份筆記。檔案只在你的裝置上讀取。" />
+    <title>備份筆記工具 · Spark Note</title>
+    <meta name="description" content="在瀏覽器中查看 Spark Note 備份筆記，並將篩選結果匯出為 PDF。檔案只在你的裝置上讀取。" />
     <link rel="stylesheet" href="../site.css" />
     <link rel="stylesheet" href="./backup-viewer.css" />
     <script src="./backup-viewer.js" defer></script>
@@ -25,10 +25,10 @@
 
       <section class="viewer-intro" aria-labelledby="viewer-title">
         <div class="viewer-intro-copy">
-          <p class="section-label">Spark Note / Backup viewer</p>
-          <h1 id="viewer-title">查看備份筆記</h1>
-          <p class="viewer-lede">把備份中的想法，安靜地攤開來看。</p>
-          <p class="viewer-intro-detail">選取從 Spark Note 匯出的 JSON 備份，即可查看筆記與分類箱。</p>
+          <p class="section-label">Spark Note / Backup tools</p>
+          <h1 id="viewer-title">備份筆記工具</h1>
+          <p class="viewer-lede">一點一滴的想法，匯聚成星河。</p>
+          <p class="viewer-intro-detail">查看、搜尋 Spark Note 備份，並將篩選結果匯出為 PDF。</p>
         </div>
         <div class="viewer-app-icon" aria-hidden="true">
           <img src="./app_icon_ios.png" alt="" />
@@ -63,9 +63,8 @@
           </div>
           <div class="viewer-summary-side">
             <p id="backup-count"></p>
-            <button id="export-pdf" class="viewer-pdf-button" type="button" title="在列印視窗選擇儲存為 PDF">匯出 PDF</button>
             <label class="viewer-pdf-option"><input id="print-note-times" type="checkbox" checked />PDF 顯示建立／更新時間</label>
-            <p class="viewer-pdf-hint">依目前篩選結果儲存；關閉列印設定中的「頁首與頁尾」可移除網址。</p>
+            <button id="export-pdf-quick" class="viewer-pdf-button" type="button" title="在列印視窗選擇儲存為 PDF" disabled>匯出 PDF</button>
           </div>
         </div>
 

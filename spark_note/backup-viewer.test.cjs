@@ -34,7 +34,7 @@ const fallbackDemo = {
 };
 const demo = fs.existsSync(demoPath) ? JSON.parse(fs.readFileSync(demoPath, 'utf8')) : fallbackDemo;
 
-function setup() {
+function setup({ pdf = true } = {}) {
   class Element {
     constructor() {
       this.children = [];
@@ -64,9 +64,14 @@ function setup() {
 
   const ids = Object.fromEntries([
     'backup-file', 'file-status', 'viewer-content', 'backup-name', 'backup-meta',
-    'backup-count', 'export-pdf', 'print-note-times', 'print-selection', 'box-filter', 'note-search',
+    'backup-count', 'export-pdf', 'export-pdf-quick', 'print-note-times', 'print-selection', 'box-filter', 'note-search',
     'result-count', 'note-list', 'empty-results',
   ].map((id) => [id, new Element()]));
+  if (!pdf) {
+    delete ids['export-pdf'];
+    delete ids['export-pdf-quick'];
+    delete ids['print-note-times'];
+  }
   const radios = ['all', 'favorite', 'trash'].map((value) => Object.assign(new Element(), { value, checked: value === 'all' }));
   const window = new Element();
   window.printCount = 0;
@@ -183,4 +188,34 @@ test('PDF action uses the current visible filters and disables on empty results'
   assert.equal(view.ids['export-pdf'].disabled, true);
   await view.ids['export-pdf'].fire('click');
   assert.equal(view.window.printCount, 2);
+});
+
+
+test('viewer works without PDF controls, including invalid files and filters', async () => {
+  const view = setup({ pdf: false });
+  await view.open(JSON.stringify(demo));
+  assert.equal(view.noteTexts().length, 10);
+  view.ids['note-search'].value = 'no matching note';
+  await view.ids['note-search'].fire('input');
+  assert.equal(view.noteTexts().length, 0);
+  await view.open('{');
+  assert.equal(view.ids['viewer-content'].hidden, true);
+  assert.match(view.ids['file-status'].textContent, /無法讀取 JSON/);
+});
+
+
+test('quick PDF button prints filtered notes and prevents empty or invalid exports', async () => {
+  const view = setup();
+  await view.open(JSON.stringify(demo));
+  await view.ids['export-pdf-quick'].fire('click');
+  assert.equal(view.window.printCount, 1);
+  view.ids['note-search'].value = 'no matching note';
+  await view.ids['note-search'].fire('input');
+  assert.equal(view.ids['export-pdf-quick'].disabled, true);
+  await view.ids['export-pdf-quick'].fire('click');
+  assert.equal(view.window.printCount, 1);
+  await view.open('{');
+  assert.equal(view.ids['export-pdf-quick'].disabled, true);
+  await view.ids['export-pdf-quick'].fire('click');
+  assert.equal(view.window.printCount, 1);
 });
